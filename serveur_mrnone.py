@@ -35,7 +35,6 @@ def chat_client():
         # Working on this!
         # May have to use Async frameworks like Twisted
         read_sockets, write_sockets, error_sockets = select.select(socket_list , [], [])
-        sock.shutdown(socket.SHUT_WR)
          
         for sock in read_sockets:            
             if sock == s:
